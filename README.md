@@ -60,8 +60,8 @@ job2();
 
 1. job0이 콜 스택에 올라가서 처리되고 없어집니다.
 2. job1이 콜 스택에 올라가서 처리됩니다.
-    1. button 태그의 click 이벤트를 감지할 때 까지 web Apis 에서 대기합니다.
-    2. job1이 콜 스택에서 없어집니다.
+   1. button 태그의 click 이벤트를 감지할 때 까지 web Apis 에서 대기합니다.
+   2. job1이 콜 스택에서 없어집니다.
 3. job2가 콜 스택에 올라가서 처리되고 없어집니다.
 4. 클릭 이벤트가 발생합니다.
 5. web Apis에 있던 콜백 작업이 콜백 큐로 이동됩니다.
@@ -175,4 +175,5 @@ applt, call, bind 함수를 사용하면 this에 원하는 값을 바인딩할 �
 ## React Hooks의 의존성 관련 질문
 
 # CSS
+
 ## CSS margin, padding 차이점
