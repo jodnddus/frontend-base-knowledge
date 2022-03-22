@@ -11,6 +11,8 @@
    - [이벤트 버블링, 캡쳐링, 위임](#이벤트-버블링-캡쳐링-위임)
 3. [리액트](#리액트)
 4. [CSS](#css)
+   - [CSS margin, padding 차이점](#css-margin-padding-차이점)
+   - [box-sizing: border-box](#box-sizing-border-box)
 
 # 브라우저
 
@@ -248,6 +250,8 @@ todoItems.forEach(function (todoItem) {
 
 # 리액트
 
+## 리액트를 왜 쓰나요?
+
 ## 리스트를 구성할 때 key 값으로 고유한 id를 사용해야 한다. 왜 index를 사용하면 안되는 것인가?
 
 ## React Hooks의 의존성 관련 질문
@@ -255,3 +259,11 @@ todoItems.forEach(function (todoItem) {
 # CSS
 
 ## CSS margin, padding 차이점
+
+박스 모델을 기준으로 border와 content 사이에 있는 것은 **padding**
+
+박스 모델을 기준으로 border 바깥쪽에 있는 공간을 **margin**
+
+## box-sizing: border-box
+
+width를 200px로 지정하고 padding을 20px로 지정했다고 가정하겠습니다. 이럴 때 실제 width는 240px로 잡히게 되는데요. 전체적인 width를 200px로 유지하고 padding을 설정하고 싶다면 어떠한 속성을 쓰나요?
