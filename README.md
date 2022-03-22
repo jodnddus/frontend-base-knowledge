@@ -97,6 +97,73 @@ let, const 변수 선언과 함수 표현식에서는 호이스팅이 이루어�
 
 ## this
 
+this는 함수의 호출 방식에 따라서 다른 값이 바인딩됩니다. 그 호출 방식에 대해서 알아보겠습니다.
+
+### 그냥 this를 호출했을 때
+
+브라우저 환경을 기준으로, 기본적으로 this에는 전역 객체(global)이 바인딩됩니다.
+![this-global](./images/this-global.png)
+
+### 일반 함수를 호출했을 때
+
+함수를 호출하면 this에 전역객체가 바인딩됩니다.
+
+하지만 엄격 모드에서는 undefined가 바인딩됩니다.
+
+### 메소드를 호출했을 때
+
+객체 내부의 함수 즉, 메서드를 호출하면 메서드가 속한 객체가 바인딩됩니다.
+
+```javascript
+var account = {
+  id: "cat",
+  password: "ilovecat",
+  getIdPassword: function () {
+    return `${this.id}, ${this.password}`;
+  },
+};
+
+account.getIdPassword(); // "cat, ilovecat"
+```
+
+### 이벤트 핸들러에 전달된 콜백 함수를 호출했을 때
+
+이벤트 핸들러에서 this는 이벤트가 발생한 해당 요소가 바인딩됩니다.
+
+```javascript
+var submit = document.querySelector("#submit");
+
+submit.addEventListener("click", function () {
+  console.log(this); // #submit
+});
+```
+
+### 생성자 함수 호출
+
+생성자 함수를 호출하면 아래와 같은 방식으로 this가 바인딩됩니다.
+
+생성자 함수의 호출 과정
+
+1. 빈 객체 생성 및 this에 생성한 객체를 바인딩
+2. this를 이용해서 프로퍼티 생성
+3. 생성된 객체 반환
+
+```javascript
+function Person(name) {
+  this.name = name;
+}
+
+const jo = new Person("jo");
+const park = new Person("park");
+
+jo.name; // "jo"
+park.name; // "park"
+```
+
+### apply/call/bind 호출
+
+applt, call, bind 함수를 사용하면 this에 원하는 값을 바인딩할 수 있습니다.
+
 ## 일반함수와 화살표함수의 차이점
 
 ## 이벤트 버블링, 캡쳐링, 위임
