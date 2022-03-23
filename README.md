@@ -13,6 +13,8 @@
 4. [CSS](#css)
    - [CSS margin, padding 차이점](#css-margin-padding-차이점)
    - [box-sizing: border-box](#box-sizing-border-box)
+5. [HTML5](#html5)
+   - [시맨틱 태그](#시맨틱-태그)
 
 # 브라우저
 
@@ -267,3 +269,23 @@ todoItems.forEach(function (todoItem) {
 ## box-sizing: border-box
 
 width를 200px로 지정하고 padding을 20px로 지정했다고 가정하겠습니다. 이럴 때 실제 width는 240px로 잡히게 되는데요. 전체적인 width를 200px로 유지하고 padding을 설정하고 싶다면 어떠한 속성을 쓰나요?
+
+# HTML5
+
+## 시맨틱 태그
+
+의미가 있는 태그라는 뜻입니다.
+
+마크업을 작성할 때 div에 class를 달아서 사용해도 큰 무리가 없습니다. 하지만 현대 웹 개발에서는 시맨틱 태그를 준수하며 작성하는게 중요해졌는데요. 왜 그럴까요?
+
+### 검색엔진 최적화
+
+검색엔진이 제작한 웹 페이지의 마크업을 읽고 판단하여 검색결과로 띄워줄 수 있게 된다.
+
+### 웹 접근성
+
+스크린리더나 키보드로 브라우저를 이용하는 경우 문제없이 작동되게 만들어준다.
+
+### 유지보수성
+
+개발자에게 의미가 있는 정보를 전달해 유지보수 용이성을 높힐 수 있다.
